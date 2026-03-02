@@ -8,6 +8,7 @@ Defines a reusable, versioned agent team that can be loaded into any project.
 
 - `src/team`: Agent definitions and handoff rules
 - `src/tools`: Tool contracts and registry
+  - `src/tools/custom_tools.ts`: Project-specific tools
 - `src/policies`: Approval and risk rules
 - `src/runtime`: Orchestration entrypoint
 - `config`: Default configuration for team and tool policy

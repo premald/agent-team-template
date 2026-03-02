@@ -13,6 +13,7 @@ A reusable, versioned multi-agent team you can drop into any project. This templ
 
 - `src/team`: Agent role definitions and handoff logic
 - `src/tools`: Tool contracts and registry
+  - Add project-specific tools in `src/tools/custom_tools.ts`
 - `src/policies`: Approval policies for tool calls
 - `src/runtime`: Orchestration entrypoint
 - `config`: Default config for team + tool permissions
@@ -46,6 +47,7 @@ Tool execution defaults:
 - `write_file` writes to disk (approval required).
 - `run_command` is disabled unless `AGENT_TEAM_ENABLE_RUN_COMMAND=true`.
 - `deploy` returns a not-wired error (project-specific).
+- Add project-specific tools in `src/tools/custom_tools.ts` and include them in the registry.
 
 ## Opinionated Defaults
 

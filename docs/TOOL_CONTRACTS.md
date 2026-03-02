@@ -54,3 +54,7 @@ Each tool must include:
 - `description`
 - `inputSchema` (JSON Schema)
 - `riskTier` (read | write | side_effect | deploy)
+
+## Extension Point
+
+Add project-specific tools in `src/tools/custom_tools.ts` and export them as `customTools`.

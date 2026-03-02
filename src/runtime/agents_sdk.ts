@@ -6,6 +6,7 @@ import { toolRegistry } from "../tools/tool_registry";
 import { requiresApproval } from "../policies/approval_policy";
 import { executeReadTool } from "../tools/read_tools";
 import { executeWriteTool } from "../tools/write_tools";
+import { executeCustomTool } from "../tools/custom_tools";
 
 function buildInstructions(spec: AgentSpec) {
   return [
@@ -68,9 +69,17 @@ function createFunctionTools(toolPermissions: ToolPermissions) {
 
 async function dispatchToolExecution(spec: ToolSpec, input: Record<string, unknown>) {
   if (spec.riskTier === "read") {
-    return executeReadTool(spec.name, input);
+    const readResult = await executeReadTool(spec.name, input);
+    if (readResult.ok || !readResult.error?.startsWith("Unknown read tool")) {
+      return readResult;
+    }
+    return executeCustomTool(spec.name, input);
   }
-  return executeWriteTool(spec.name, input);
+  const writeResult = await executeWriteTool(spec.name, input);
+  if (writeResult.ok || !writeResult.error?.startsWith("Unknown write tool")) {
+    return writeResult;
+  }
+  return executeCustomTool(spec.name, input);
 }
 
 export type ApprovalHandler = (interruption: any) => Promise<"approve" | "reject">;
