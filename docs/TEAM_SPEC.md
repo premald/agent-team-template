@@ -12,6 +12,7 @@ Defines a reusable, versioned agent team that can be loaded into any project.
 - `src/runtime`: Orchestration entrypoint
 - `config`: Default configuration for team and tool policy
 - `docs`: Team specs, tool contracts, and approval policy
+ - `src/runtime/agents_sdk.ts`: Agents SDK wiring entrypoint
 
 ## Default Roles
 

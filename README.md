@@ -25,6 +25,20 @@ A reusable, versioned multi-agent team you can drop into any project. This templ
 4. Update team defaults in `config/team.defaults.json` if needed.
 5. Wire `src/runtime/orchestrator.ts` into your app entrypoint.
 
+## Agents SDK Wiring
+
+This template includes an Agents SDK wiring entrypoint at `src/runtime/agents_sdk.ts`.
+
+Setup:
+
+1. Install the SDK: `npm install @openai/agents`
+2. Set `OPENAI_API_KEY` in your environment.
+3. Update `config/team.defaults.json` with a model your account can access.
+
+Usage:
+
+- Call `runTeamTask(\"your task\")` from `src/runtime/agents_sdk.ts` to run the coordinator.
+
 ## Opinionated Defaults
 
 - Selective human approvals:
