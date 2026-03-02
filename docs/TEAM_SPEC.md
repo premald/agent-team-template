@@ -14,6 +14,7 @@ Defines a reusable, versioned agent team that can be loaded into any project.
 - `config`: Default configuration for team and tool policy
 - `docs`: Team specs, tool contracts, and approval policy
  - `src/runtime/agents_sdk.ts`: Agents SDK wiring entrypoint
+ - `scripts/init-agent-team.sh`: CLI initializer for existing repos
 
 ## Default Roles
 

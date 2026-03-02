@@ -26,6 +26,21 @@ A reusable, versioned multi-agent team you can drop into any project. This templ
 4. Update team defaults in `config/team.defaults.json` if needed.
 5. Wire `src/runtime/orchestrator.ts` into your app entrypoint.
 
+## CLI Initializer
+
+Use `scripts/init-agent-team.sh` to copy the team scaffold into an existing repo.
+
+Example:
+
+```bash
+./scripts/init-agent-team.sh /path/to/target-repo
+```
+
+Notes:
+
+- Existing files are not overwritten.
+- `README.md` and `tsconfig.json` are copied as `README.agent-team.md` and `tsconfig.agent-team.json` to avoid conflicts.
+
 ## Agents SDK Wiring
 
 This template includes an Agents SDK wiring entrypoint at `src/runtime/agents_sdk.ts`.
