@@ -1,0 +1,12 @@
+{
+  "name": "agent-team-template",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Reusable multi-agent team template",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
