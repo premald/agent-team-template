@@ -38,6 +38,14 @@ Setup:
 Usage:
 
 - Call `runTeamTask(\"your task\")` from `src/runtime/agents_sdk.ts` to run the coordinator.
+- If a tool requires approval, pass an approval handler to `runTeamTask(input, onApproval)`.
+
+Tool execution defaults:
+
+- `read_file` and `search_docs` are implemented for local repo reads.
+- `write_file` writes to disk (approval required).
+- `run_command` is disabled unless `AGENT_TEAM_ENABLE_RUN_COMMAND=true`.
+- `deploy` returns a not-wired error (project-specific).
 
 ## Opinionated Defaults
 
