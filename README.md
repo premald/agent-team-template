@@ -17,6 +17,7 @@ A reusable, versioned multi-agent team you can drop into any project. This templ
 - `src/policies`: Approval policies for tool calls
 - `src/runtime`: Orchestration entrypoint
 - `config`: Default config for team + tool permissions
+- `memory-bank`: Project memory bank (requirements, progress, features, tests)
 
 ## How To Use This Template
 
@@ -40,6 +41,7 @@ Notes:
 
 - Existing files are not overwritten.
 - `README.md` and `tsconfig.json` are copied as `README.agent-team.md` and `tsconfig.agent-team.json` to avoid conflicts.
+- `memory-bank/` and `.clinerules` are copied for project memory.
 
 ## Agents SDK Wiring
 
@@ -55,6 +57,7 @@ Usage:
 
 - Call `runTeamTask(\"your task\")` from `src/runtime/agents_sdk.ts` to run the coordinator.
 - If a tool requires approval, pass an approval handler to `runTeamTask(input, onApproval)`.
+- Use `npm run run:workflow -- \"your task\"` to run the full plan → build → review → test flow with memory-bank logging.
 
 Tool execution defaults:
 

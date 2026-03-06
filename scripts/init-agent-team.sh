@@ -33,8 +33,10 @@ copy_dir "$SOURCE_ROOT/src" "$TARGET_DIR/src"
 copy_dir "$SOURCE_ROOT/config" "$TARGET_DIR/config"
 copy_dir "$SOURCE_ROOT/docs" "$TARGET_DIR/docs"
 copy_dir "$SOURCE_ROOT/scripts" "$TARGET_DIR/scripts"
+copy_dir "$SOURCE_ROOT/memory-bank" "$TARGET_DIR/memory-bank"
 
 copy_file "$SOURCE_ROOT/README.md" "$TARGET_DIR/README.agent-team.md"
 copy_file "$SOURCE_ROOT/tsconfig.json" "$TARGET_DIR/tsconfig.agent-team.json"
+copy_file "$SOURCE_ROOT/.clinerules" "$TARGET_DIR/.clinerules"
 
 echo "Agent team bootstrap complete."

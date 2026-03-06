@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "description": "Reusable multi-agent team template",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "run:task": "node dist/runtime/run_task.js",
+    "run:workflow": "node dist/runtime/run_workflow.js"
   },
   "devDependencies": {
     "typescript": "^5.4.0"

@@ -15,6 +15,7 @@ Defines a reusable, versioned agent team that can be loaded into any project.
 - `docs`: Team specs, tool contracts, and approval policy
  - `src/runtime/agents_sdk.ts`: Agents SDK wiring entrypoint
  - `scripts/init-agent-team.sh`: CLI initializer for existing repos
+- `memory-bank`: Project memory bank (requirements, progress, features, tests)
 
 ## Default Roles
 
